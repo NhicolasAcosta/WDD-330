@@ -26,10 +26,19 @@ img {
   max-width: 100%;
 }
 header {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10px;
+  display: grid;
+  grid-template-columns: 30% 69% 1%;
 }
+.number-card {
+  display: grid;
+  
+  align-items: center;
+  margin: 0px;
+  justify-content: end;
+  align-items: center;
+
+}
+
 .logo {
   line-height: 60px;
   width: 245px;
@@ -99,8 +108,8 @@ button {
 /* Cart icon styles */
 .cart {
   padding-top: 1em;
-  position: relative;
-  text-align: center;
+  justify-content: end;
+  display: flex;
 }
 
 .cart svg {
