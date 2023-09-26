@@ -1,8 +1,12 @@
-import { getLocalStorage, getParam, setLocalStorage, loadHeaderFooter } from  "./utils.mjs";
+import {
+  getLocalStorage,
+  getParam,
+  setLocalStorage,
+  loadHeaderFooter,
+} from "./utils.mjs";
 import dataSource from "./ProductData.mjs";
 
 loadHeaderFooter();
-
 
 function productDetailsTemplate(product) {
   return `<section class="product-detail"> <h3>${product.Brand.Name}</h3>
@@ -27,7 +31,10 @@ export default class ProductDetails {
     this.product = {};
   }
   async init() {
-    this.product = await new dataSource().findProductById(getParam("product"),getParam("category"));
+    this.product = await new dataSource().findProductById(
+      getParam("product"),
+      getParam("category")
+    );
     this.renderProductDetails("main");
     document
       .getElementById("addToCart")
@@ -37,6 +44,7 @@ export default class ProductDetails {
     const cart = getLocalStorage("cart-select") || [];
     cart.push(this.product);
     setLocalStorage("cart-select", cart);
+    numbersItems();
   }
 
   renderProductDetails(selector) {
@@ -47,5 +55,14 @@ export default class ProductDetails {
     );
   }
 }
+
+
+ export function numbersItems() {
+  const cart = getLocalStorage("cart-select") || [];
+
+  document.getElementById("cartNumber").innerHTML = cart.length;
+}
+
+numbersItems();
 
 new ProductDetails().init();

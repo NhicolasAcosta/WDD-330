@@ -61,3 +61,4 @@ export async function loadTemplate(path) {
   const template = await res.text();
   return template;
 }
+

@@ -211,6 +211,9 @@ button {
   cursor: pointer;
   font-size: 20px;
 }
+a {
+  text-decoration: none;
+}
 .img-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
