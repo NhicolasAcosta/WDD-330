@@ -1,10 +1,8 @@
-import ProductData from "./ProductData.mjs";
-import ProductList from "./ProductList.mjs";
-import { loadHeaderFooter } from "./utils.mjs";
+import ProductData from "../js/ProductData.mjs";
+import ProductList from "../js/ProductList.mjs";
+import { loadHeaderFooter } from "../js/utils.mjs";
 
 loadHeaderFooter();
-
-
 
 
 const dataSource = new ProductData("tents");
