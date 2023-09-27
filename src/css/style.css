@@ -159,6 +159,22 @@ color: var(--primary-color)
   margin: 0.5em 0;
 }
 
+@media screen and (max-width: 1069px) {
+  .product-card {
+    max-width:100%;
+    text-align:center;
+  }
+}
+
+@media screen and (max-width: 619px) {
+  .product-card {
+    display: block;
+    flex: none;
+    margin: 20px auto;
+    padding: 25px;
+  }
+}
+
 .card__brand {
   font-size: var(--small-font);
 }
