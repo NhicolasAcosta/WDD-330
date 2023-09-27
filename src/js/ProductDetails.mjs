@@ -3,6 +3,7 @@ import {
   getParam,
   setLocalStorage,
   loadHeaderFooter,
+  itemsCart,
 } from "./utils.mjs";
 import dataSource from "./ProductData.mjs";
 
@@ -41,10 +42,15 @@ export default class ProductDetails {
       .addEventListener("click", this.addToCart.bind(this));
   }
   addToCart() {
-    const cart = getLocalStorage("cart-select") || [];
-    cart.push(this.product);
+    const cart = getLocalStorage("cart-select") || {};
+    cart[this.product.Id] = cart[this.product.Id]
+      ? {
+          ...cart[this.product.Id],
+          quantity: cart[this.product.Id].quantity + 1,
+        }
+      : { ...this.product, quantity: 1 };
     setLocalStorage("cart-select", cart);
-    numbersItems();
+    itemsCart();
   }
 
   renderProductDetails(selector) {
@@ -55,14 +61,5 @@ export default class ProductDetails {
     );
   }
 }
-
-
- export function numbersItems() {
-  const cart = getLocalStorage("cart-select") || [];
-
-  document.getElementById("cartNumber").innerHTML = cart.length;
-}
-
-numbersItems();
 
 new ProductDetails().init();

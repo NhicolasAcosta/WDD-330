@@ -27,24 +27,26 @@ export function getParam(param) {
   return urlParams.get(param);
 }
 
-export function renderListWithTemplate(templateFn, parentElement, list, position = "afterbegin", clear = false) {
+export function renderListWithTemplate(
+  templateFn,
+  parentElement,
+  list,
+  position = "afterbegin",
+  clear = false
+) {
   const htmlStrings = list.map(templateFn);
   if (clear) {
     parentElement.innerHTML = "";
   }
   parentElement.insertAdjacentHTML(position, htmlStrings.join(""));
-
-
-} 
-
+}
 
 export function renderWithTemplate(template, parentElement, data, callback) {
   parentElement.insertAdjacentHTML("afterbegin", template);
-  if(callback) {
+  if (callback) {
     callback(data);
   }
 }
-
 
 export async function loadHeaderFooter() {
   const headerTemplate = await loadTemplate("../partials/header.html");
@@ -54,6 +56,16 @@ export async function loadHeaderFooter() {
 
   renderWithTemplate(headerTemplate, headerElement);
   renderWithTemplate(footerTemplate, footerElement);
+  itemsCart();
+}
+
+export function itemsCart() {
+  const cart = getLocalStorage("cart-select") || {};
+  const number = Object.values(cart).reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
+  document.getElementById("cartNumber").innerHTML = number;
 }
 
 export async function loadTemplate(path) {
@@ -61,4 +73,3 @@ export async function loadTemplate(path) {
   const template = await res.text();
   return template;
 }
-
