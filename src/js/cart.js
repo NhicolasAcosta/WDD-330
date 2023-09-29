@@ -1,10 +1,8 @@
-import { loadHeaderFooter  } from "./utils.mjs";
+import { loadHeaderFooter } from "./utils.mjs";
 import ShoppingCart from "./ShoppingCart.mjs";
 import { getLocalStorage } from "./utils.mjs";
 
-
 loadHeaderFooter();
-
 
 function itemsCart() {
   const carts = getLocalStorage("cart-select") || [];
