@@ -10,6 +10,7 @@ function convertToJson(res) {
 
 export default class ProductData {
   constructor() {
+    
   }
 
   async getData(category) {
