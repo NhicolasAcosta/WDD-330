@@ -12,11 +12,9 @@
     <link rel="stylesheet" href="../css/style.css" />
 
     <script src="../js/checkout.js" type="module"></script>
-
   </head>
 
   <body>
-    
     <header class="divider" id="main-header">
       <p class="aa" id="cartNumber"></p>
     </header>
@@ -27,12 +25,9 @@
           <div class="col-75">
             <div class="container">
               <h2>Review & Place your Order</h2>
-
-              
               <form name="checkout">
                 <div class="row grid">
                   <div class="col-50">
-                    <h3>Billing Address</h3>
                     <label for="fname"
                       ><i class="fa fa-user"></i> Full Name</label
                     >
@@ -42,7 +37,6 @@
                       name="firstname"
                       maxlength="15"
                       minlength="4"
-                      pattern="^[a-zA-Z0-9_.-]*$"
                       required
                       placeholder="John M. Doe"
                     />
@@ -185,15 +179,17 @@
                       <p id="orderTotal"></p>
                     </li>
                   </ul>
+                </div>
 
-                <input  id="checkoutSubmit" type="submit" value="Continue to checkout" class="btn" />
+                <input
+                  id="checkoutSubmit"
+                  type="submit"
+                  value="Continue to checkout"
+                  class="btn"
+                />
               </form>
             </div>
           </div>
-        </div>
-
-        
-      
         </div>
       </section>
     </main>

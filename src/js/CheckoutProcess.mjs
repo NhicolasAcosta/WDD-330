@@ -97,6 +97,7 @@ export default class CheckoutProcess {
     json.shipping = this.shipping;
     json.items = packageItems(this.list);
     console.log(json);
+    
     try {
       const res = await services.checkout(json);
       console.log(res);
