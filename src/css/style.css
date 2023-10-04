@@ -134,7 +134,22 @@ color: var(--primary-color)
 }
 .products {
   padding: 0.5em;
+  
 }
+.orders-container {
+  display: grid;
+  grid-template-columns: 1fr ;
+  padding: 5vw;
+}
+.title-orders {
+  text-align: center;
+}
+.order-customer {
+  display: flex;
+  flex-direction: column;
+}
+
+
 .product-list {
   display: flex;
   flex-flow: row wrap;
@@ -250,6 +265,10 @@ a {
 
 li {
   list-style-type: none;
+}
+.order-customer {
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 500px) {
