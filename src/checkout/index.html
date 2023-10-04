@@ -25,7 +25,7 @@
           <div class="col-75">
             <div class="container">
               <h2>Review & Place your Order</h2>
-              <form>
+              <form name="checkout">
                 <div class="row grid">
                   <div class="col-50">
                     <h3>Billing Address</h3>
@@ -160,19 +160,35 @@
                   </div>
                 </div>
 
-                <input type="submit" value="Continue to checkout" class="btn" />
+                <input  id="checkoutSubmit" type="submit" value="Continue to checkout" class="btn" />
               </form>
             </div>
           </div>
         </div>
-        <div class="order">
+
+        
+        <div class="order checkout-summary">
           <h3>Order</h3>
-          <div>
-            <p>subTotal:</p>
-            <p>Shipping:</p>
-            <p>Tax:</p>
-            <p>Total:</p>
-          </div>
+          <ul>
+            <li>
+              <label for="cartTotal"
+                >Item Subtotal(<span id="num-items"></span>)</label
+              >
+              <p name="cartTotal" id="cartTotal"></p>
+            </li>
+            <li>
+              <label for="shipping">Shipping Estimate</label>
+              <p id="shipping"></p>
+            </li>
+            <li>
+              <label for="tax">Tax</label>
+              <p id="tax"></p>
+            </li>
+            <li>
+              <label for="orderTotal"><b>Order Total</b></label>
+              <p id="orderTotal"></p>
+            </li>
+          </ul>
         </div>
       </section>
     </main>

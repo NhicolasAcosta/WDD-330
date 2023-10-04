@@ -5,7 +5,7 @@ import {
   loadHeaderFooter,
   itemsCart,
 } from "./utils.mjs";
-import dataSource from "./ProductData.mjs";
+import dataSource from "./ExternalServices.mjs";
 
 loadHeaderFooter();
 
