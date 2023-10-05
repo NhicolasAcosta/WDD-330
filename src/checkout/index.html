@@ -36,7 +36,7 @@
                       id="fname"
                       name="fname"
                       required
-                      placeholder="John M. Doe"
+                      placeholder="Yeampier"
                     />
                     <label for="lname"
                       ><i class="fa fa-envelope"></i> Last Name</label
@@ -45,7 +45,7 @@
                       type="text"
                       name="lname"
                       required
-                      placeholder="john@example.com"
+                      placeholder="Huerta"
                     />
                     <label for="street"
                       ><i class="fa fa-address-card-o"></i> Address</label
@@ -94,43 +94,36 @@
 
                   <div class="col-50 grid-2">
                     <h3>Payment</h3>
-                    <label for="fname">Accepted Cards</label>
-                    <div class="icon-container">
-                      <i class="fa fa-cc-visa" style="color: navy"></i>
-                      <i class="fa fa-cc-amex" style="color: blue"></i>
-                      <i class="fa fa-cc-mastercard" style="color: red"></i>
-                      <i class="fa fa-cc-discover" style="color: orange"></i>
-                    </div>
+                    <label>Accepted Cards</label>
 
                     <label for="cardNumber">Credit card number</label>
                     <input
                       name="cardNumber"
                       required
-                      maxlength="20"
-                      placeholder="1111-2222-3333-4444"
+                      value="1234123412341234"
+                      type="text"
                     />
 
-                    <div class="row">
-                      <div class="col-50">
+                      <div >
                         <label for="expiration">Exp Year</label>
                         <input
-                          type="text"
+                          type="month"
                           name="expiration"
                           required
-                          placeholder="2018"
+                          value="12/24"
                         />
                       </div>
-                      <div class="col-50">
-                        <label for="code">CVV</label>
+                      <div>
+                        <label class="code" for="code">CVV</label>
                         <input
                           type="text"
                           id="cvv"
                           name="code"
                           required
+                          value="123"
                           placeholder="352"
                         />
                       </div>
-                    </div>
                   </div>
                 </div>
                 <div class="checkout-summary">
