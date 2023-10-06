@@ -17,7 +17,9 @@ document.querySelector("#checkoutSubmit").addEventListener("click", (e) => {
   const myForm = document.forms[0];
   const chk_status = myForm.checkValidity();
   myForm.reportValidity();
-  if (chk_status) myCheckout.checkout();
-  location.href = "success.html";
-  deleteLocalStorage();
+  if (chk_status) {
+    location.href = "success.html";
+    deleteLocalStorage();
+  }
+  myCheckout.checkout();
 });
