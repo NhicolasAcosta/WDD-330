@@ -265,3 +265,13 @@ footer {
   font-size: var(--small-font);
   padding: 1em;
 }
+
+.checkout { border:solid 1px green;
+  width:auto;
+  padding:10px;
+  background-color:green;
+  border-radius:5px;
+  color:#fff;
+  display:inline-block;
+  margin-bottom:20px;
+}
