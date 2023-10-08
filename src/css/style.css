@@ -266,7 +266,7 @@ footer {
   padding: 1em;
 }
 
-.checkout { border:solid 1px green;
+.checkoutButton { border:solid 1px green;
   width:auto;
   padding:10px;
   background-color:green;
