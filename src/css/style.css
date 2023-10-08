@@ -275,3 +275,12 @@ footer {
   display:inline-block;
   margin-bottom:20px;
 }
+
+#tfn input {
+  display:block;
+  margin-bottom:2px;
+}
+
+#tfn input:nth-child(7) {
+  margin-bottom:20px;
+}

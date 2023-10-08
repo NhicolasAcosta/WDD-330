@@ -8,7 +8,7 @@
 
     <title>Sleep Outside | Checkout</title>
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <script src="./js/main.js" type="mudule"></script>
 
   </head>
@@ -21,6 +21,19 @@
     <main class="divider">
       <section class="products">
         <h2>Review & Place your Order</h2>
+        <form id="tfn">
+          <h3>Address</h3>
+          <input type="text" name="firstName" value="" placeholder="First Name" required>
+          <input type="text" name="lastName" value="" placeholder="Last Name" required>
+          <input type="text" name="address" value="" placeholder="Street Address" required>
+          <input type="text" name="city" value="" placeholder="City" required>
+          <input type="text" name="state" value="" placeholder="State" required>
+          <input type="text" name="zipCode" value="" placeholder="Zip Code" required>
+          <h3>Payment Info</h3>
+          <input type="text" name="creditCardNumber" value="" placeholder="Credit Card Number" required>
+          <input type="text" name="expirationDate" value="" placeholder="Expiration Date (MM/YY)" required>
+          <input type="text" name="securityCode" value="" placeholder="CVV2 Code" required>
+        </form>
       </section>
     </main>
 
