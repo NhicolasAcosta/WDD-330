@@ -170,6 +170,10 @@ button {
 .product-card p {
   margin: 0.5em 0;
 }
+.product-card__savings {
+  color: green;
+  font-weight:bold;
+}
 
 .card__brand {
   font-size: var(--small-font);
