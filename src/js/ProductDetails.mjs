@@ -4,6 +4,7 @@ import {
   setLocalStorage,
   loadHeaderFooter,
   itemsCart,
+  performAnimation,
 } from "./utils.mjs";
 import dataSource from "./ExternalServices.mjs";
 
@@ -51,6 +52,7 @@ export default class ProductDetails {
       : { ...this.product, quantity: 1 };
     setLocalStorage("cart-select", cart);
     itemsCart();
+    performAnimation();
   }
 
   renderProductDetails(selector) {
