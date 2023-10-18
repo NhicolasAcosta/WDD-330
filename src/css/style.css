@@ -170,6 +170,10 @@ button {
 .product-card p {
   margin: 0.5em 0;
 }
+.product-card__savings {
+  color: green;
+  font-weight:bold;
+}
 
 .card__brand {
   font-size: var(--small-font);
@@ -304,4 +308,17 @@ li {
 footer {
   font-size: var(--small-font);
   padding: 1em;
+}
+
+.spinBackpack {
+  animation: spinBackpack 2s linear 1;
+  transform-origin: bottom forwards;
+}
+
+@keyframes spinBackpack {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform:rotate(360deg);
+    
+  }
 }
