@@ -100,9 +100,9 @@ export default class CheckoutProcess {
     
     try {
       const res = await services.checkout(json);
-      console.log(res);
+      console.log("Checkout: SUCCESS", res);
     } catch (err) {
-      console.log(err);
+      console.log("Checkout: ERROR", err);
     }
   }
 }

@@ -14,12 +14,12 @@ document
 
 document.querySelector("#checkoutSubmit").addEventListener("click", (e) => {
   e.preventDefault();
-  const myForm = document.forms[0];
-  const chk_status = myForm.checkValidity();
-  myForm.reportValidity();
-  if (chk_status) {
-    location.href = "success.html";
-    deleteLocalStorage();
+  const myForm = document.forms[0]; // Gets the form
+  const chk_status = myForm.checkValidity(); // Invoked the form's native validity checks, those that are defined within the tags themselves
+  myForm.reportValidity(); // If there is a problem with the form's validity, print the error message
+  if (chk_status) { // Only continue with the ckecout if the validity check passes
+    deleteLocalStorage(); // clear the cart
+    location.href = "success2.html"; // REdirect user to the success page upon successful checkout 
   }
   myCheckout.checkout();
 });

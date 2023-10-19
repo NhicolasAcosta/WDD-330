@@ -30,6 +30,19 @@ export function getParam(param) {
   return urlParams.get(param);
 }
 
+export function performAnimation() {
+  addAnimationClass().then(() => { console.log("great")});
+}
+
+async function addAnimationClass() {
+  document.getElementById("cartIcon").classList.add("spinBackpack");
+  setTimeout(() => { document.getElementById("cartIcon").classList.remove("spinBackpack") }, 2000)
+}
+
+function removeAnimationClass() {
+  document.getElementById("cartIcon").classList.remove("spinBackpack")
+}
+
 export function renderListWithTemplate(
   templateFn,
   parentElement,
